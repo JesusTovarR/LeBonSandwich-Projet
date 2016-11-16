@@ -1,0 +1,270 @@
+@mixin reset($bodyFontFamily, $bodyTextColor, $bodyBackgroundColor, $fontSizeh1, $articleColor, $sectionColor, $footerColor, $fontColorLink, $survolColor) {
+
+  $fontSizeh2:$fontSizeh1 - 2;
+  $fontSizeh3:$fontSizeh2 - 2;
+  $fontSizeh4:$fontSizeh3 - 2;
+  $fontSizeh5:$fontSizeh4 - 2;
+  $fontSizeh6:$fontSizeh5 - 2;
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding-bottom: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    background-color: $bodyBackgroundColor;
+    color: $bodyTextColor;
+    font-family: $bodyFontFamily;
+    font-size: 1em;
+    min-width: 300px;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+  ol, ul {
+    list-style-type: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  header{
+    background-color: #DCFD78;
+    box-sizing: border-box;
+  }
+  div{
+    box-sizing: border-box;
+    margin-top:10px ;
+  }
+
+  article{
+    box-sizing: border-box;
+    background-color: $articleColor;
+  }
+
+
+  section{
+    box-sizing: border-box;
+    background-color: $sectionColor;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  footer{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $bodyTextColor;
+    background:$footerColor;
+    height: 300px;
+    //border-top: 2px solid #000;
+    //padding :2%;
+
+  }
+
+  a{
+    text-decoration: none;
+    color: $fontColorLink;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+
+  /* Selecteurs */
+  h1, h2, h3, h4, h5, h6 {
+
+    font-weight: bold;
+    font-family: Arial, Verdana, "Times New Roman", "sans-serif";
+    color: black;
+    margin-top: 1em;
+    margin-bottom:1em ;
+
+  }
+
+  h1 {
+    font-size: $fontSizeh1;
+  }
+  h2 {
+    font-size: $fontSizeh2;
+  }
+  h3 {
+    font-size: $fontSizeh3;
+  }
+  h4 {
+    font-size: $fontSizeh4;
+  }
+  h5 {
+    font-size: $fontSizeh5;
+  }
+  h6 {
+    font-size: $fontSizeh6;
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i}.sous-titre {
+      font-size: $fontSizeh1 - ($i*2);
+      color: gray;
+
+    }
+  }
+
+  small {
+    font-weight:400;
+    line-height:1;
+    color: gray;
+  }
+
+  mark {
+    background-color: gray;
+    border-radius: 0.5em;
+  }
+
+  del {
+    color: gray;
+    text-decoration: line-through;
+  }
+
+  ins {
+    text-decoration: underline;
+  }
+
+  u {
+    color: red;
+    text-decoration: underline;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  .strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  abbr {
+    color: black;
+    font-weight: bold;
+  }
+
+  blockquote:before {
+    content: open-quote;
+  }
+  blockquote:after {
+    content: close-quote;
+  }
+
+  blockquote {
+    font-family: "Times New Roman";
+    quotes: "«" "»";
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+  pre {
+    display: block;
+    font-family: Verdana;
+    white-space: pre;
+    margin: 1em 0;
+  }
+
+  kbd {
+    font-family: "Times New Roman";
+  }
+
+  p {
+    font-family: Arial;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    line-height:1.2;
+  }
+
+  .square {
+    list-style-type: square;
+  }
+
+  .rien {
+    list-style-type: none;
+  }
+
+  .textgauche {
+    text-align: left;
+  }
+
+  .textdroit {
+    text-align: right;
+  }
+  .textcenter {
+    text-align: center;
+  }
+
+  .textjustifie {
+    text-align: justify;
+  }
+
+  .textmajuscules {
+    text-transform: uppercase;
+  }
+
+  .textminuscules {
+    text-transform: lowercase;
+  }
+
+  .alternes:nth-child(odd){
+    background-color: blue;
+    color: red;
+  }
+
+  .alternes:nth-child(even){
+    background-color: brown;
+    color: pink;
+  }
+
+  .bordures {
+    border: solid;
+    border-style: dotted;
+    border-color: dimgray;
+    border-width: 1px;
+  }
+
+  .survol:hover {
+    color: $survolColor;
+  }
+}

@@ -1,0 +1,39 @@
+
+@mixin alertes($alertBackgroundColor){
+  .alert{
+    width: 100%;
+    background-color: $alertBackgroundColor;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  .successAlert{
+    @extend .alert;
+    border: 1px solid #05B019;
+    color: #05B019;
+    font-weight: 300;
+  }
+
+  .infoAlert{
+    @extend .alert;
+    border: 1px solid #5858FB;
+    color: #5858FB;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .warningAlert{
+    @extend .alert;
+    border: 1px solid #F38F1D;
+    color: #F38F1D;
+    font-weight: 300;
+  }
+
+  .dangerAlert{
+    @extend .alert;
+    border: 1px solid #F92F2F ;
+    color: #F92F2F;
+    font-weight: 300;
+  }
+}
+

@@ -1,0 +1,172 @@
+/*Les boîtes*/
+@mixin bouton($fontSizeBtn,$backgroundBtn ,$backgroundBtnHover, $textColorBtn, $textColorBtnHover, $borderStyleBtn, $borderColorBtn) {
+
+  .btn {
+    font-size: $fontSizeBtn;
+    padding: 0.7em;
+    text-align: center;
+    background-color: $backgroundBtn;
+    color: $textColorBtn;
+    border: solid;
+    border-style: $borderStyleBtn;
+    border-color: $borderColorBtn;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+
+  .btn:hover {
+    background-color: $backgroundBtnHover;
+    color: $textColorBtnHover;
+    cursor: pointer;
+  }
+
+  .btn:active {
+    background-color: $backgroundBtn;
+    color: $textColorBtn;
+  }
+  @media screen  and (max-width: 600px){
+    .btn{
+      width: 100%;
+    }
+
+  }
+}
+
+@mixin boutonFat($fontSizeBtn,$backgroundBtn , $textColorBtn){
+  .btn-fat {
+    font-size: $fontSizeBtn;
+    padding: 0.7em;
+    text-align: center;
+    background-color: $backgroundBtn;
+    color: $textColorBtn;
+    border: none;
+  }
+
+  .btn-fat:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin boutonExtraLarge($fontSizeBtn,$backgroundBtn ,$backgroundBtnHover, $textColorBtn, $textColorBtnHover, $borderStyleBtn, $borderColorBtn) {
+  .btn-extraLarge {
+    width: 100%;
+    font-size: $fontSizeBtn;
+    padding: 0.7em;
+    text-align: center;
+    background-color: $backgroundBtn;
+    color: $textColorBtn;
+    border: solid;
+    border-style: $borderStyleBtn;
+    border-color: $borderColorBtn;
+    border-width: 2px;
+    border-radius: 1em;
+  }
+
+  .btn-extraLarge:hover {
+    background-color: $backgroundBtnHover;
+    color: $textColorBtnHover;
+    cursor: pointer;
+  }
+
+  .btn-extraLarge:active {
+    background-color: $backgroundBtn;
+    color: $textColorBtn;
+  }
+}
+
+@mixin boutonFancy($fontSizeBtn, $backgroundBtnFancy1, $backgroundBtnFancy2, $textColorBtnFancy, $textColorBtnHoverFancy ){
+  .btn-fancy {
+    position: relative;
+    font-size: $fontSizeBtn;
+    padding: 0.7em;
+    text-align: center;
+    background: -moz-linear-gradient(left, $backgroundBtnFancy1 0%, $backgroundBtnFancy2 100%);
+    background: -webkit-linear-gradient(left, $backgroundBtnFancy1 0%, $backgroundBtnFancy2 100%);
+    box-shadow: 0 5px 5px #313131, 0 9px 0 #393939, 0px 9px 10px rgba(0, 0, 0, 0.4), inset 0px 2px 15px rgba(255, 255, 255, 0.4), inset 0 -2px 9px rgba(0, 0, 0, 0.2);
+    color: $textColorBtnFancy;
+    border: none;
+    border-radius: 5px;
+    margin:10px;
+
+  }
+
+  .btn-fancy:hover {
+    background: -moz-linear-gradient(left, $backgroundBtnFancy2 0%, $backgroundBtnFancy1 100%);
+    background: -webkit-linear-gradient(left, $backgroundBtnFancy2 0%, $backgroundBtnFancy1 100%);
+    box-shadow: 0 7px 7px #313131, 0 11px 0 #393939, 0px 11px 12px rgba(0, 0, 0, 0.4), inset 0px 4px 17px rgba(255, 255, 255, 0.4), inset 0 -4px 11px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease;
+    color: $textColorBtnHoverFancy;
+    cursor: pointer;
+  }
+
+  .btn-fancy:active {
+    color: $textColorBtnFancy;
+  }
+}
+
+@mixin tailleExtra(){
+  .btnSmall {
+    font-size: small;
+  }
+
+  .btnLarge {
+    font-size: large;
+  }
+
+}
+
+@mixin ExtraCouleur1($backgroundBtn1,$textColorBtn1, $borderColorBtn1, $backgroundBtnHover1, $textColorBtnHover1){
+  .btn-couleur1 {
+    background-color: $backgroundBtn1;
+    color: $textColorBtn1;
+    border-color: $borderColorBtn1;
+  }
+
+  .btn-couleur1:hover {
+    background-color: $backgroundBtnHover1;
+    color: $textColorBtnHover1;
+  }
+
+  .btn-couleur1:active {
+    background-color: $backgroundBtn1;
+    color: $textColorBtn1;
+  }
+}
+
+@mixin ExtraCouleur2($backgroundBtn2,$textColorBtn2,$borderColorBtn2, $backgroundBtnHover2, $textColorBtnHover2){
+  .btn-couleur2 {
+    background-color: $backgroundBtn2;
+    color: $textColorBtn2;
+    border-color: $borderColorBtn2;
+  }
+
+  .btn-couleur2:hover {
+    background-color: $backgroundBtnHover2;
+    color: $textColorBtnHover2;
+  }
+
+  .btn-couleur2:active {
+    background-color: $backgroundBtn2;
+    color: $textColorBtn2;
+  }
+}
+
+@mixin ExtraCouleur3($backgroundBtn3,$textColorBtn3,$borderColorBtn3, $backgroundBtnHover3, $textColorBtnHover3){
+  .btn-couleur3 {
+    background-color: $backgroundBtn3;
+    color: $textColorBtn3;
+    border-color: $borderColorBtn3;
+  }
+
+  .btn-couleur3:hover {
+    background-color: $backgroundBtnHover3;
+    color: $textColorBtnHover3;
+  }
+
+  .btn-couleur3:active {
+    background-color: $backgroundBtn3;
+    color: $textColorBtn3;
+  }
+}
+
+

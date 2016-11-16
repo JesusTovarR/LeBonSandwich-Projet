@@ -1,0 +1,210 @@
+
+@mixin jumbotron($backgroundJumbotron, $textJumbotronColor) {
+  .jumbotron {
+    background-color: $backgroundJumbotron;
+    text-align: center;
+    border-bottom: 1px solid $backgroundJumbotron*.5;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    color: $textJumbotronColor;
+  }
+
+  .jumbotron .btn {
+    padding: 12px 26px;
+    font-size: 21px;
+    margin-bottom: 30px;
+  }
+
+  .jumbotron h1 {
+    margin: .6em 0;
+    font-size: 2em
+  }
+
+  .textJumbotron {
+    margin-bottom: 18px;
+    font-size: 21px;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: 768px) {
+    .jumbotron {
+      padding-top: 40px;
+      padding-bottom: 40px
+    }
+    .jumbotron h1 {
+      font-size: 60px
+    }
+  }
+
+  @media (min-width: 768px) {
+    .textJumbotron {
+      font-size: 21px
+    }
+  }
+}
+@mixin header(){
+  .header{
+    margin-bottom: 30px;
+    h1{
+      border-bottom: 1px solid black;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
+}
+
+
+@mixin Navegation($menuBackgroundColor, $menuBackgroundColorHover, $menuTextColor,$menuBorderColor, $menuBotonColor,$menuFontSize){
+  .navbar{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    li{
+      display: inline-block;
+      a{
+        background-color: $menuBackgroundColor;
+        padding: 10px 20px;
+        font-size: $menuFontSize;
+        text-decoration: none;
+        color:$menuTextColor;
+        border-radius: 4px;
+      }
+      a:hover{
+        background-color: $menuBackgroundColorHover;
+        color: $menuTextColor;
+      }
+
+      a.active{
+        @extend a;
+      }
+      a.active:hover{
+        @extend a:hover;
+        text-decoration: none;
+      }
+      a.disabled{
+        background-color: #A4A8A5;
+        color:#868B88 ;
+        cursor: default;
+
+      }
+      a.disabled:hover{
+        color: #868B88;
+        border: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .navbar {
+      list-style-type: none;
+      padding: 0px 0px 0px 0px;
+      li{
+        list-style-type: none;
+        display: none;
+        border-bottom:1px solid white;
+        a{
+          list-style-type: none;
+          display: block;
+          padding: 25px 0;
+          //padding-left: 25px;
+          transition: background-color 0.1s;
+        }
+        a:hover{
+          color: $menuTextColor;
+          background-color: $menuBackgroundColorHover;
+        }
+        a.disabled{
+          background-color: #A4A8A5;
+          color:#868B88 ;
+          cursor: default;
+
+        }
+        a.disabled:hover{
+          color: #868B88;
+          border: none;
+        }
+      }
+    }
+    .navbar::before{
+      list-style-type: none;
+      width: 100%;
+      font-size: 3em;
+      text-align: center;
+      content: "Menu";
+      display:inline-block;
+      background-color: $menuBotonColor;
+      cursor: pointer;
+      //height: 50px;
+    }
+    .navbar:hover{
+      li{
+        display: block;
+      }
+    }
+  }
+
+}
+
+@mixin FilDarine($filTextColor){
+  .breadcrumb{
+    li{
+      display: inline-block;
+      list-style-type: none;
+      &::after{
+        content: "/";
+        padding: 5px;
+      }
+      &:last-child, &.disabled{
+        a{
+          color: $filTextColor;
+          cursor: pointer;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+      &:last-child{
+        &::after{
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@mixin Pagination($paginationTextColor,$paginationTextColorHover, $paginationBorderColor, $paginationBackgroundActiveColorHover) {
+  .pagination {
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0 -2px;
+      a {
+        border: 1px solid $paginationBorderColor;
+        color: $paginationTextColor;
+        padding: 5px 10px;
+      }
+      a:hover {
+        background-color: blue;
+        color: $paginationTextColorHover;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      a.active {
+        background-color: $paginationBackgroundActiveColorHover;
+        color: $paginationTextColor;
+        text-decoration: none;
+      }
+      a.disabled {
+        background-color: #A4A8A5;
+        color: #868B88;
+        cursor: default;
+
+      }
+      a.disabled:hover {
+        color: #868B88;
+      }
+    }
+  }
+}

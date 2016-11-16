@@ -1,0 +1,149 @@
+@import "buttons";
+@import "alertes";
+@import "composants";
+@import "reset";
+@import "grille";
+
+$bodyFontFamily:Verdana;
+$bodyTextColor:black;
+$bodyBackgroundColor:orange;
+$fontSizeh1:30px;
+$articleColor:#FCED42;
+$sectionColor:#FCED42;
+$footerColor:orange;
+$fontColorLink:black;
+$survolColor:#62FB74;
+
+@include reset($bodyFontFamily, $bodyTextColor, $bodyBackgroundColor, $fontSizeh1, $articleColor, $sectionColor, $footerColor, $fontColorLink, $survolColor);
+@include alertes($bodyBackgroundColor);
+
+/*Les boîtes*/
+/*Boutons variables generales*/
+$fontSizeBtn:1em;
+$backgroundBtn: #6DB250;
+$backgroundBtnHover:#76CE50;
+$textColorBtn:white;
+$textColorBtnHover:white;
+$borderStyleBtn:none;
+$borderColorBtn:none;
+
+@include bouton($fontSizeBtn,$backgroundBtn ,$backgroundBtnHover, $textColorBtn, $textColorBtnHover, $borderStyleBtn, $borderColorBtn);
+@include boutonFat($fontSizeBtn,$backgroundBtn , $textColorBtn);
+@include boutonExtraLarge($fontSizeBtn,$backgroundBtn ,$backgroundBtnHover, $textColorBtn, $textColorBtnHover, $borderStyleBtn, $borderColorBtn);
+@include header();
+
+/*Bouton fancy  variables*/
+$backgroundBtnFancy1:#D0F5A9;
+$backgroundBtnFancy2:#58FA82;
+$textColorBtnFancy:black;
+$textColorBtnHoverFancy:gray;
+
+@include boutonFancy($fontSizeBtn, $backgroundBtnFancy1, $backgroundBtnFancy2, $textColorBtnFancy, $textColorBtnHoverFancy );
+
+@include tailleExtra();
+
+/*Bouton couleur 1 variables*/
+$backgroundBtn1:#FCED42;
+$backgroundBtnHover1:orange;
+$backgroundBtnActive1:#FCED42;
+$textColorBtn1:black;
+$textColorBtnHover1:black;
+$borderColorBtn1:black;
+@include ExtraCouleur1($backgroundBtn1,$textColorBtn1, $borderColorBtn1, $backgroundBtnHover1, $textColorBtnHover1);
+
+/*Bouton couleur  variables*/
+$backgroundBtn2:#D0F5A9;
+$backgroundBtnHover2:#2E9AFE;
+$backgroundBtnActive2:pink;
+$textColorBtn2:black;
+$textColorBtnHover2:gray;
+$borderColorBtn2:black;
+@include ExtraCouleur2($backgroundBtn2,$textColorBtn2, $borderColorBtn2, $backgroundBtnHover2, $textColorBtnHover2);
+
+/*Bouton couleur 3 variable*/
+$backgroundBtn3:brown;
+$backgroundBtnHover3:white;
+$backgroundBtnActive3:orange;
+$textColorBtn3:red;
+$textColorBtnHover3:black;
+$borderColorBtn3:black;
+@include ExtraCouleur3($backgroundBtn3,$textColorBtn3, $borderColorBtn3, $backgroundBtnHover3, $textColorBtnHover3);
+
+$alertBackgroundColor:#FFFFF;
+@include alertes($alertBackgroundColor);
+
+
+$backgroundJumbotron:gray;
+$textJumbotronColor:black;
+@include jumbotron($backgroundJumbotron ,$textJumbotronColor);
+
+/*grille*/
+$columns_number:8;
+$gutter_width:2%;
+@include grille($columns_number, $gutter_width);
+
+
+$menuBackgroundColor:#2DA10D;
+$menuBackgroundColorHover:#27C64F;
+$menuTextColor:#FFFFFF;
+$menuBorderColor: #5CFA83;
+$menuBotonColor:#DCFD78;
+$menuFontSize:16px;
+@include Navegation($menuBackgroundColor, $menuBackgroundColorHover, $menuTextColor ,$menuBorderColor, $menuBotonColor, $menuFontSize);
+
+
+$filTextColor:black;
+@include FilDarine($filTextColor);
+
+$paginationTextColor:White;
+$paginationTextColorHover:orage;
+$paginationBorderColor:black;
+$paginationBackgroundActiveColorHover:purple;
+@include Pagination($paginationTextColor,$paginationTextColorHover, $paginationBorderColor, $paginationBackgroundActiveColorHover);
+
+header ul{
+  marging:0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px){
+  header h1 {
+    display: none;
+    }
+  h1{
+    width: 100%;
+    text-align: center;
+  }
+  }
+
+@media screen and (max-width: 768px) {
+  div .img {
+    width: 90%;
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.table{
+  background-color:#76CE50;
+  border: 1px solid #5858FB;
+  width:100%;
+  margin:0 0 50px 0
+}
+.table th{
+  background:#FC424E;
+  padding:5px;
+  text-align:center;
+}
+.table td{border-bottom:1px solid #5858FB;
+  padding:5px;
+  text-align:center
+}
+.table tr:last-child td{
+  border:0
+}
+
+
